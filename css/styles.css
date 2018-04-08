@@ -1,5 +1,10 @@
 
-@import "https://fonts.googleapis.com/css?family=Oswald";
+@import "https://fonts.googleapis.com/css?family=Oswald|Jua";
+
+.row {
+    width: 100%;
+    margin: 0;
+}
 
 /* Styles for upper bar */
 .upper-bar {
@@ -100,7 +105,15 @@ i {
 /* Styles for features section */
 
 .features {
-    margin: 40px 20px;
+    font-family: 'Jua';
+}
+
+.features .row .col-sm-6:hover {
+    border-radius: 45px;
+    box-shadow: -1px 0px 33px -5px rgba(24,30,110,0.3);
+    transition: all ease .5s;
+    background-color: #f9f7f7;
+    cursor: pointer;
 }
 
 .features i {
@@ -116,32 +129,38 @@ i {
 
 .features p {
     font-size: 15px;
-    color: #989898;
+    color: #A1A1A1;
 }
-    
+
+
 /* End Styles for features section */
 
 
 /* Start styles for company overview section */
 
 .overview {
-    background-color: #EFF3F8;
+    background-color: #f9f7f7;
     padding: 25px;
+    font-family: 'Jua';
 }
 
 .overview h2 {
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: bold;
+    color: #08526d;
 }
 
 .overview p {
-    width: 42%;
-    font-size: 15px;
-    color: #989898;
+    font-size: 16px;
+    color: #A1A1A1;
+}
+
+.overview p:first-of-type {
+    width: 60%;
     line-height: 2;
 }
 
-.overview p.sec-child {
+.overview p:last-of-type {
     letter-spacing: 3px;
 }
 
@@ -156,23 +175,49 @@ i {
 /* End styles for company overview section */
 
 /* Start styles for featured work */
+
+.featured-work {
+    font-family: 'Jua';
+}
+
+.featured-work h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #08526d;
+}
+
 .featured-work p {
-    width: 45%;
+    width: 60%;
+    font-size: 16px;
+    color: #A1A1A1;
 }
 
 .featured-work ul li {
-    display: inline-block;
-    padding: 5px;
     text-transform: uppercase;
-    border: 1px solid #08526d;
+    border: 2px solid #08526d;
     border-radius: 2px;
     color: #08526d;
-    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.featured-work ul li.active,
+.featured-work ul li:hover {
+    background-color: #ec1c23;
+    color: #fff;
+    border-color: #ec1c23;
 }
 
 .featured-work ul li.active {
-    background-color: #ec1c23;
-    color: #fff;
-    border: none;
+    /* cursor: none;   DOES NOT WORK!!!! */
+}
+
+.featured-work ul li:hover {
+    cursor: pointer;
 }
 /* End styles for featured work */
